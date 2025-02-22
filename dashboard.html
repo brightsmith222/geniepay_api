@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <div class="d-flex" id="dashboard-layout">
+    <div id="sidebar" class="hidden">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li class="active"><span class="material-icons-outlined">dashboard</span> Dashboard</li>
+            <li><span class="material-icons-outlined">account_balance_wallet</span> Transactions</li>
+            <li><span class="material-icons-outlined">bar_chart</span> Statistics</li>
+            <li><span class="material-icons-outlined">people</span> Users</li>
+            <li><span class="material-icons-outlined">settings</span> Settings</li>
+        </ul>
+    </div>
+
+    <div class="flex-grow-1">
+        <div id="top-navbar">
+            <button class="btn btn-outline-secondary d-md-none" id="toggle-sidebar">☰</button>
+            <div class="dropdown navbar-right">
+                <img src="img/avatar.png" class="avatar dropdown-toggle" data-bs-toggle="dropdown" alt="User Avatar">
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">View Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main class="col-md-10 p-4 main-bdy">
+                
+            <div class="header mb-4">
+                <h4>Good afternoon, User</h4>
+                <p>Here is what's happening with your projects today:</p>
+            </div>
+            
+            <div class="row">
+            <div class="col-xl-6 col-md-12 col-12 mb-5">
+            <div class="row row-cols-lg-2 row-cols-1 g-5  ">
+                <div class="col">
+                    <div class="card card-lift p-3 ">
+                        <div class="d-flex">
+                        <span>Bounce Rate [Avg]</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity text-gray-400"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></span>
+                        </div>
+                        <div><h3 class="fw-bold">47.74%</h3></div>
+                        <p class="text-danger">↓ -26.50%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-lift p-3 ">
+                        <div class="d-flex">
+                        <span>New Sessions</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart text-gray-400"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></span>
+                        </div>
+                        <div><h3 class="fw-bold">76.40%</h3></div>
+                        <p class="text-success">↑ 2.50%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-lift p-3 ">
+                        <div class="d-flex">
+                        <span>Pageviews [Avg]</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send text-gray-400"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></span>
+                        </div>
+                        <div><h3 class="fw-bold">2.15</h3></div>
+                        <p class="text-danger">↓ -1.83%</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-lift p-3 ">
+                        <div class="d-flex">
+                        <span>Time on Site [Avg]</span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock text-gray-400"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+                        </div>
+                        <div><h3 class="fw-bold">2m:15s</h3></div>
+                        <p class="text-success">↑ 21.50%</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xl-6 col-md-12 col-12 mb-5">
+                <div class="col-md-12">
+                    <div class="card p-4">
+                        <h5>Session by Device Type</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2 class="text-primary">51.5%</h2>
+                                <p>Desktop</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2 class="text-success">34.4%</h2>
+                                <p>Mobile</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2 class="text-warning">20.8%</h2>
+                                <p>Tablet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-custom align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Dates</th>
+                            <th>Budget</th>
+                            <th>Task Progress</th>
+                            <th>Status</th>
+                            <th>Team</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Web Application Design</td>
+                            <td>01 Jan, 2023</td>
+                            <td>$22,000</td>
+                            <td>
+                                <div class="progress progress-bar-custom">
+                                    <div class="progress-bar bg-primary" style="width: 80%;"></div>
+                                </div>
+                                80%
+                            </td>
+                            <td><span class="badge bg-info text-dark">In Progress</span></td>
+                            <td class="team-avatar">
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <span class="badge bg-secondary">5+</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <span class="action-icon" data-bs-toggle="dropdown">more_vert</span>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item edit-btn" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item delete-btn" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Task Application Development</td>
+                            <td>20 Nov, 2023</td>
+                            <td>$20,000</td>
+                            <td>
+                                <div class="progress progress-bar-custom">
+                                    <div class="progress-bar bg-success" style="width: 100%;"></div>
+                                </div>
+                                100%
+                            </td>
+                            <td><span class="badge bg-success">Completed</span></td>
+                            <td class="team-avatar">
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <span class="badge bg-secondary">8+</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <span class="action-icon" data-bs-toggle="dropdown">more_vert</span>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item edit-btn" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item delete-btn" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CRM Dashboard</td>
+                            <td>23 Dec, 2023</td>
+                            <td>$0</td>
+                            <td>
+                                <div class="progress progress-bar-custom">
+                                    <div class="progress-bar bg-danger" style="width: 30%;"></div>
+                                </div>
+                                30%
+                            </td>
+                            <td><span class="badge bg-danger">Cancel</span></td>
+                            <td class="team-avatar">
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <img src="https://via.placeholder.com/30" alt="team" />
+                                <span class="badge bg-secondary">4+</span>
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <span class="action-icon" data-bs-toggle="dropdown">more_vert</span>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item edit-btn" href="#">Edit</a></li>
+                                        <li><a class="dropdown-item delete-btn" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        </main>
+    </div>
+</div>
+    <script src="main.js"></script>
+
+</body>
+</html>

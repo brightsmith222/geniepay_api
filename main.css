@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+#sidebar {
+    background-color: #262c05;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#sidebar ul li.active {
+    background-color: #3a4306;
+}
+
+#sidebar ul li:hover {
+    background-color: #3a4306;
+}
+
+/* Top Navbar Styles */
+#top-navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header {
+    background: #6f42c1;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        position: absolute;
+        z-index: 1000;
+        transform: translateX(-100%);
+    }
+
+    #sidebar.show {
+        transform: translateX(0);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-right {
+        margin-left: auto;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.overlay.show {
+    display: block;
+}
+
+.card{
+    box-shadow: 0 2px 4px rgba(0, 0, 20, .08), 0 1px 2px rgba(0, 0, 20, .08);
+}
+.card-lift {
+    border-radius: 0.5rem;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card-lift:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-4px); /* Slight lift effect */
+}
+
+
+  .material-icons-outlined {
+      font-size: 18px !important;
+  }
+
+  .fw-bold {
+    font-weight: 700 !important;
+}
+.d-flex{
+    display: flex; 
+    justify-content: space-between;
+}
+.g-5, .gy-5 {
+    --dashui-gutter-y: 1rem !important;
+}
+.g-5, .gy-5 {
+    --bs-gutter-y: 1rem !important;
+}
+.g-5, .gx-5 {
+    --bs-gutter-x: 1rem !important;
+}
+.progress-bar-custom { height: 8px; }
+.table-custom { border-collapse: collapse; }
+.table-custom th, .table-custom td { border: none; }
+.team-avatar img { width: 30px; height: 30px; border-radius: 50%; }
+.action-icon { 
+    cursor: pointer; 
+    font-family: 'Material Symbols Outlined'; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.action-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray background */
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
